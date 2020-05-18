@@ -5,5 +5,5 @@ import course from "./couse";
 
 export default combineReducers({
   course,
-  //user
+  //user // caso haja mais de um reducer
 });

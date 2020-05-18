@@ -15,6 +15,7 @@ const Sidebar = ({ modules, toggleLesson }) => (
             <li key={lesson.id}>
               {lesson.title}
               <button onClick={() => toggleLesson(module, lesson)}>
+                {/* mapDispatchToProps */}
                 Selecionar
               </button>
             </li>
@@ -29,6 +30,6 @@ const mapStateToProps = (state) => ({
   modules: state.course.modules,
 });
 const mapDispatchToProps = (dispatch) =>
-  bindActionCreators(CourseActions, dispatch);
+  bindActionCreators(CourseActions, dispatch); // utilizado para não recriar um função com mesmo nome e parametros
 
 export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
