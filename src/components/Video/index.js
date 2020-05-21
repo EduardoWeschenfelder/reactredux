@@ -4,8 +4,16 @@ import { connect } from "react-redux";
 
 const Video = ({ activeModule, activeLesson }) => (
   <div>
-    <strong>Módulo {activeModule.title}</strong>
-    <span>Aula {activeLesson.title} </span>
+    {/* só abre o módulo após escolher */}
+    {activeModule.title ? (
+      <div>
+        <strong>Módulo => {activeModule.title}</strong>
+        <br />
+        <span>Aula => {activeLesson.title} </span>
+      </div>
+    ) : (
+      ""
+    )}
   </div>
 );
 
